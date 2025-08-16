@@ -1,8 +1,4 @@
-FRPS_SERVER=ubuntu@118.126.91.13
-
-yuejia:
-	rsync -avz --progress conf/* $(YUEJIA_SERVER):/etc/nginx/ --rsync-path="sudo rsync"
-	ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $(YUEJIA_SERVER) "sudo nginx -t && sudo nginx -s reload"
+FRPS_SERVER=ubuntu@101.33.203.250
 
 frpc:
 	./frpc_arm64/frpc -c ./frpc_arm64/frpc.toml
