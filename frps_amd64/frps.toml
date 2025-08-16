@@ -1,0 +1,8 @@
+[common]
+bind_port = 7000
+vhost_http_port = 7200
+dashboard_port = 7100
+dashboard_user = admin
+dashboard_pwd = xie123456
+token = L9f$7vXq2@Pz#8RmG!tB1kQw
+enable_tls = true
