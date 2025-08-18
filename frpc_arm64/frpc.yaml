@@ -1,0 +1,20 @@
+serverAddr: 101.33.203.250
+serverPort: 7000
+
+auth:
+  token: "L9f$7vXq2@Pz#8RmG!tB1kQw"
+
+proxies:
+  - name: ssh
+    type: tcp
+    localPort: 22
+    remotePort: 6000
+    transport:
+      useEncryption: true
+      useCompression: true
+
+  - name: web
+    type: http
+    localPort: 3000
+    customDomains:
+      - local.xiejiapeng.com

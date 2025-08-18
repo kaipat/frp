@@ -1,0 +1,11 @@
+bindPort: 7000
+vhostHttpPort: 7200
+
+webServer:
+  addr: 0.0.0.0
+  port: 7500
+  user: admin
+  password: xie123456
+
+auth:
+  token: "L9f$7vXq2@Pz#8RmG!tB1kQw"

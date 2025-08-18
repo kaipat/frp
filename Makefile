@@ -1,7 +1,7 @@
 FRPS_SERVER=ubuntu@101.33.203.250
 
 frpc:
-	./frpc_arm64/frpc -c ./frpc_arm64/frpc.toml
+	./frpc_arm64/frpc -c ./frpc_arm64/frpc.yaml
 
 frps:
 	rsync -avz --progress frps_amd64/* $(FRPS_SERVER):~/frps
