@@ -13,6 +13,11 @@ proxies:
       useEncryption: true
       useCompression: true
 
+  - name: mac
+    type: tcp
+    localPort: 5900
+    remotePort: 5900
+
   - name: web
     type: http
     localPort: 3000
