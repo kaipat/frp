@@ -4,7 +4,14 @@ server_port = 7000
 token = L9f$7vXq2@Pz#8RmG!tB1kQw
 
 [[proxies]]
-name = web
-type = http
+name = "ssh"
+type = tcp
+local_ip = "127.0.0.1"
+local_port = 22
+remote_port = 6000
+
+[[proxies]]
+name = "web"
+type = "http"
 local_port = 3000
-custom_domains = local.xiejiapeng.com
+custom_domains = "local.xiejiapeng.com"
