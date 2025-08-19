@@ -7,6 +7,10 @@ frps:
 	rsync -avz --progress frps_amd64/* $(FRPS_SERVER):~/frps
 	ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $(FRPS_SERVER) "sudo systemctl restart frps"
 
+auto_run_on_ubuntu:
+	rsync -avz --progress ./frps_amd64/frps.service $(FRPS_SERVER):/etc/systemd/system/ --rsync-path="sudo rsync"
+	ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $(FRPS_SERVER) "sudo systemctl stop frps && sudo systemctl daemon-reload && sudo systemctl start frps && sudo systemctl enable frps && sudo systemctl status frps"
+
 auto_run_on_mac:
 	sudo launchctl bootout system /Library/LaunchDaemons/com.frp.frpc.plist || true
 	sudo cp ./frpc_arm64/com.frp.frpc.plist /Library/LaunchDaemons/
