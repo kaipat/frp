@@ -18,8 +18,8 @@ proxies:
     localPort: 5900
     remotePort: 5900
 
-  - name: web
-    type: http
-    localPort: 3000
-    customDomains:
-      - local.xiejiapeng.com
+#  - name: web
+#    type: http
+#    localPort: 3000
+#    customDomains:
+#      - local.xiejiapeng.com
