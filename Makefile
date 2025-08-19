@@ -11,7 +11,8 @@ auto_run_on_mac:
 	sudo launchctl bootout system /Library/LaunchDaemons/com.frp.frpc.plist || true
 	sudo cp ./frpc_arm64/com.frp.frpc.plist /Library/LaunchDaemons/
 	sudo plutil -lint /Library/LaunchDaemons/com.frp.frpc.plist
-	sudo chown root /Library/LaunchDaemons/com.frp.frpc.plist
+	sudo chown root:wheel /Library/LaunchDaemons/com.frp.frpc.plist
+	sudo chmod 644 /Library/LaunchDaemons/com.frp.frpc.plist
 	sudo launchctl bootstrap system /Library/LaunchDaemons/com.frp.frpc.plist
 	sudo launchctl enable system/com.frp.frpc
 	sudo launchctl list | grep com.frp.frpc
