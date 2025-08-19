@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 唯一标识 -->
+    <key>Label</key>
+    <string>com.frp.frpc</string>
+
+    <!-- 启动命令及参数 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/jiapeng/Code/frp/frpc_arm64/frpc</string>
+        <string>-c</string>
+        <string>/Users/jiapeng/Code/frp/frpc_arm64/frpc.yaml</string>
+    </array>
+
+    <!-- 开机自动启动 -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- 日志输出 -->
+    <key>StandardOutPath</key>
+    <string>/var/log/frpc.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/frpc.err</string>
+</dict>
+</plist>
